@@ -5,3 +5,8 @@
 
 
 -Created the model that classify pets' breed
+
+
+-Prototype reuslt
+
+<img src="https://user-images.githubusercontent.com/55820321/86207543-bd6b1480-bba9-11ea-990c-eb1ebc270a28.JPG" width="700" height="370">
