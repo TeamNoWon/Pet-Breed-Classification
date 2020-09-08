@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
 
-    <title>Classify pets' breed</title>
     <link rel="stylesheet" href="style.css" />
     <script
       class="jsbin"
@@ -17,32 +23,40 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+
     <script src="./modelData.json"></script>
     <script src="./script.js"></script>
+
+    <title>Classify pets' breed</title>
   </head>
- 
+
   <body>
     <!-- 네비게이션 바 부분 -->
     <nav class="navbar navbar-expand-lg navbar-light nav-distance">
       <a class="navbar-brand" href="#">애완동물 품종 탐색 (강아지, 고양이)</a>
-     
     </nav>
     <section class="section">
       <h1 class="title">인공지능 애완동물 품종 분류기 (강아지,고양이)</h1>
       <h2 class="subtitle">What is the breed of that pet?</h2>
-
     </section>
     <section class="github">
       <div class="container mt-5 github-cover d-flex flex-row-reverse">
-        <a href="https://github.com/TeamNoWon/Pet-Breed-Classification" class="github-link">By TeamNoWon</a>
+        <a
+          href="https://github.com/TeamNoWon/Pet-Breed-Classification"
+          class="github-link"
+          target="_blank"
+        >
+          <img
+            src="img/깃허브 아이콘.png"
+            class="github-icon"
+            style="width: 10%"
+          />By TeamNoWon</a
+        >
       </div>
     </section>
 
-
     <div class="container file-upload">
-  
-  
-      <div class="image-upload-wrap" style="width:65%; margin:0 auto">
+      <div class="image-upload-wrap" style="width: 65%; margin: 0 auto">
         <input
           class="file-upload-input"
           type="file"
@@ -50,9 +64,14 @@
           accept="image/*"
         />
         <div class="drag-text">
-          <img src="img/upload.svg"
-     class="mt-5 pt-5 upload" style="width:20%">
-          <h3 class="mb-5 pb-5 pt-4 upload-text">동물 사진을 올려놓거나 눌러서 업로드하세요!</h3>
+          <img
+            src="img/upload.svg"
+            class="mt-5 pt-5 upload"
+            style="width: 20%"
+          />
+          <h3 class="mb-5 pb-5 pt-4 upload-text">
+            동물 사진을 올려놓거나 눌러서 업로드하세요!
+          </h3>
         </div>
       </div>
       <div class="file-upload-content">
@@ -65,40 +84,61 @@
         <div id="label-container"></div>
         <div class="image-title-wrap">
           <button type="button" onclick="removeUpload()" class="remove-image">
-            사진 제거 
+            사진 제거
           </button>
         </div>
       </div>
     </div>
 
-    <div id="webcam-container"></div>
     <div id="label-container"></div>
 
-    <div id="disqus_thread"></div>
-<script>
+    <!-- 댓글창 -->
 
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
+    <div id="disqus_thread" style="margin: 10%; margin-top: 0px;"></div>
+
+    <script>
+      /**
+       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
 var disqus_config = function () {
 this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
 this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 */
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://teamnowon.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                            
-     <!-- Optional JavaScript -->
+      (function () {
+        // DON'T EDIT BELOW THIS LINE
+        var d = document,
+          s = d.createElement("script");
+        s.src = "https://teamnowon.disqus.com/embed.js";
+        s.setAttribute("data-timestamp", +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+
+    <noscript
+      >Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript"
+        >comments powered by Disqus.</a
+      ></noscript
+    >
+
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

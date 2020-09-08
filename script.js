@@ -1,4 +1,4 @@
-var modelData; // json 파일 저장용 
+var modelData; // json 파일 저장용
 
 function readURL(input) {
   if (input.files && input.files[0]) {
@@ -14,12 +14,10 @@ function readURL(input) {
     };
 
     reader.readAsDataURL(input.files[0]);
-    init().then(()=>{
+    init().then(() => {
       console.log("Init completed");
       predict();
     }); //바로 init실행 다 기다렸다가 Init completed하고, 그다음 predict()수행
-
-
   } else {
     removeUpload();
   }
@@ -107,9 +105,9 @@ readJsonFile("./modelData.json", function (text) {
 
 function findPetInJson(predictPet, modelData) {
   for (let i = 0; i < modelData.length; i++) {
-     if(modelData[i].name.includes(predictPet) === true){
-       return modelData[i].text;
-     }
+    if (modelData[i].name.includes(predictPet) === true) {
+      return modelData[i].text;
+    }
   }
 }
 
@@ -131,7 +129,7 @@ function findTopPrediction(predictionObj) {
     <p style="font-weight:bold; font-size: x-large">
     사진의 애완동물은 ${predictPet} 입니다!
     </p> 
-    <p>${findPetInJson(predictPet,modelData)}</p>`;
+    <p>${findPetInJson(predictPet, modelData)}</p>`;
 
   labelContainer.childNodes[0].innerHTML = classPrediction;
 }
