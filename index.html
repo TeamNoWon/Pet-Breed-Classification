@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
+
   <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Classify pets' breed</title>
     <link rel="stylesheet" href="style.css" />
     <script
       class="jsbin"
@@ -8,10 +17,70 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script src="./modelData.json"></script>
     <script src="./script.js"></script>
   </head>
+ 
   <body>
-    <div class="file-upload">
+    <!-- 네비게이션 바 부분 -->
+    <nav class="navbar navbar-expand-lg navbar-light nav-distance">
+      <a class="navbar-brand" href="#">애완 동물 품종 테스트</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <section class="section">
+      <h1 class="title">인공지능 애완동물 품종 분류기 (강아지,고양이)</h1>
+      <h2 class="subtitle">저 강아지/고양이는 품종이 무엇일까?</h2>
+
+
+    </section>
+    <section class="github">
+      <div class="container mt-5 github-cover d-flex flex-row-reverse"><img src="img\깃허브 아이콘2.png" alt="" class="github-icon">
+        <a href="https://github.com/TeamNoWon/Pet-Breed-Classification" class="github-link">By TeamNoWon</a>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container file-upload">
       <div class="title">Teachable Machine Image Model <br>by TeamNoWon</div>
       <div class="container-btn">
         <button
@@ -28,7 +97,7 @@
           3. 예측
         </button>
       </div>
-      <div class="image-upload-wrap">
+      <div class="image-upload-wrap" style="width:65%; margin:0 auto">
         <input
           class="file-upload-input"
           type="file"
@@ -36,7 +105,9 @@
           accept="image/*"
         />
         <div class="drag-text">
-          <h3 style="font-weight:bold">사진을 드래그 혹은 클릭하여 사진 추가</h3>
+          <img src="img/upload.svg"
+     class="mt-5 pt-5 upload" style="width:20%">
+          <h3 class="mb-5 pb-5 pt-4 upload-text">동물 사진을 올려놓거나 눌러서 업로드하세요!</h3>
         </div>
       </div>
       <div class="file-upload-content">
@@ -56,5 +127,10 @@
 
     <div id="webcam-container"></div>
     <div id="label-container"></div>
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   </body>
 </html>

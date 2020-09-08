@@ -8,7 +8,7 @@
 
 -Prototype result 
 
-![prototype](https://user-images.githubusercontent.com/55820321/90356681-48856880-e08b-11ea-8cb3-c85f39400cab.png)
+![prototype](https://user-images.githubusercontent.com/55820321/90382378-a2048c00-e0b9-11ea-91e4-898d1bf32705.png)
 
 -Success model test
 

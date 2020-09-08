@@ -2,14 +2,18 @@
 
 body {
   font-family: "Noto Sans KR", sans-serif !important;
-  background-color: #eeeeee;
+  background-color: #ffffff;
 }
 
 .file-upload {
+  margin:0 auto;
+  padding: 13% 3%;
   background-color: #ffffff;
-  width: 600px;
-  margin: 0 auto;
-  padding: 20px;
+
+
+  border-radius: 10px;
+  border: solid 1.5px #f6f7fa;
+  background-color: #f6f7fa;
 }
 
 .title {
@@ -111,15 +115,19 @@ body {
 }
 
 .image-upload-wrap {
-  margin-top: 20px;
-  border: 4px dashed #1fb264;
+width:55%;
+margin:0 auto;
   position: relative;
+  object-fit: contain;
+  border-radius: 10px;
+  border: dashed 1.5px #35465d;
+  background-color: #ffffff;
 }
 
 .image-dropping,
 .image-upload-wrap:hover {
-  background-color: #1fb264;
-  border: 4px dashed #ffffff;
+  background-color: #35465d;
+  border: 1.5px dashed #ffffff;
 }
 
 .image-title-wrap {
@@ -132,10 +140,15 @@ body {
 }
 
 .drag-text h3 {
+  width:50%;
   font-weight: 100;
   text-transform: uppercase;
-  color: #15824b;
-  padding: 60px 0;
+  font-family: NanumSquareR;
+  font-size: 1.5rem;
+  line-height: 1.53;
+  text-align: center;
+  color: #35465d;
+  margin:0 auto
 }
 
 .file-upload-image {
@@ -171,7 +184,65 @@ body {
   border: 0;
   transition: all 0.2s ease;
 }
+.nav-distance {
+  padding: 2.1% 7.7%
 
+}
+.navbar-light .navbar-brand{
+
+  font-family: NanumSquareR;
+  line-height: 1.68;
+  text-align: left;
+  color: #35465d;
+}
+
+.navbar-light .navbar-toggler {
+  border-color: #ffffff;
+}
+/* media쿼리 사용 600px이하로 내려가면 폰트사이즈 조정 */
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+  .navbar-brand{
+    font-size:2rem;
+  }
+}
+.github-link {
+  font-family: NanumSquareR;
+  font-size: 1.5rem;
+  line-height: 1.71;
+  text-align: center;
+  color: #f73737;
+  text-decoration: underline;
+}
+.github-link:hover {
+  font-family: NanumSquareR;
+  font-size: 1.5rem;
+  line-height: 1.71;
+  text-align: center;
+  color: #f73737;
+  text-decoration: underline;
+}
+.github-icon {
+  width: 8%
+}
+/*바와 간격 설정*/
+.section {
+  margin-top:100px;
+}
+.title{
+  font-family: NanumSquareR;
+  line-height: 1.67;
+  text-align: center;
+  color: #35465d;
+}
+.subtitle{
+  font-family: NanumSquareR;
+  line-height: 1.53;
+  text-align: center;
+  color: #35465d;
+}
 #label-container {
   background-color: #ffffff;
   width: 600px;
