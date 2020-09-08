@@ -193,7 +193,7 @@ margin:0 auto;
   font-family: NanumSquareR;
   line-height: 1.68;
   text-align: left;
-  color: #35465d;
+  color: #008000;
 }
 
 .navbar-light .navbar-toggler {
@@ -244,8 +244,12 @@ margin:0 auto;
   color: #35465d;
 }
 #label-container {
-  background-color: #ffffff;
-  width: 600px;
   margin: 0 auto;
   padding: 20px;
+
+  font-family: NanumSquareR;
+  line-height: 1.46;
+  text-align: center;
+  color: #35465d;
+  
 }

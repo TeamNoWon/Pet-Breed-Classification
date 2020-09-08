@@ -14,6 +14,12 @@ function readURL(input) {
     };
 
     reader.readAsDataURL(input.files[0]);
+    init().then(()=>{
+      console.log("Init completed");
+      predict();
+    }); //바로 init실행 다 기다렸다가 Init completed하고, 그다음 predict()수행
+
+
   } else {
     removeUpload();
   }
