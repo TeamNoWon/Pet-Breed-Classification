@@ -4,13 +4,22 @@ body {
   font-family: "Noto Sans KR", sans-serif !important;
   background-color: #ffffff;
 }
-
+.ad-banner {
+  width: 400px;
+  margin:0 auto;
+}
+.coupang-banner {
+  justify-content: center;
+  margin:0 auto;
+}
+.just-content-center {
+  justify-content: center;
+  margin:0 auto;
+}
 .file-upload {
   margin:0 auto;
-  padding: 13% 3%;
+  padding: 10% 3%;
   background-color: #ffffff;
-
-
   border-radius: 10px;
   border: solid 1.5px #f6f7fa;
   background-color: #f6f7fa;
@@ -126,7 +135,7 @@ margin:0 auto;
 
 .image-dropping,
 .image-upload-wrap:hover {
-  background-color: #35465d;
+  background-color: #bdc3c7;
   border: 1.5px dashed #ffffff;
 }
 
@@ -184,6 +193,7 @@ margin:0 auto;
   border: 0;
   transition: all 0.2s ease;
 }
+
 .nav-distance {
   padding: 2.1% 7.7%
 
@@ -208,24 +218,27 @@ margin:0 auto;
     font-size:2rem;
   }
 }
+
+.github{
+  margin-bottom: 3%;
+}
+
 .github-link {
   font-family: NanumSquareR;
   font-size: 1.5rem;
   line-height: 1.71;
   text-align: center;
   color: #f73737;
-  text-decoration: underline;
 }
 .github-link:hover {
   font-family: NanumSquareR;
   font-size: 1.5rem;
   line-height: 1.71;
   text-align: center;
-  color: #f73737;
-  text-decoration: underline;
+  color: #c0392b;
 }
 .github-icon {
-  width: 8%
+  margin-right: 10px;
 }
 /*바와 간격 설정*/
 .section {
@@ -251,5 +264,4 @@ margin:0 auto;
   line-height: 1.46;
   text-align: center;
   color: #35465d;
-  
 }
