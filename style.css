@@ -4,7 +4,18 @@ body {
   font-family: "Noto Sans KR", sans-serif !important;
   background-color: #ffffff;
 }
-
+.ad-banner {
+  width: 400px;
+  margin:0 auto;
+}
+.coupang-banner {
+  justify-content: center;
+  margin:0 auto;
+}
+.just-content-center {
+  justify-content: center;
+  margin:0 auto;
+}
 .file-upload {
   margin:0 auto;
   padding: 10% 3%;
