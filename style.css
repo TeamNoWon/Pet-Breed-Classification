@@ -30,11 +30,7 @@ body {
   font-weight: bold;
   text-align: center;
 }
-.container-btn {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-}
+
 
 .file-upload-btn {
   width: 20%;
@@ -139,7 +135,7 @@ margin:0 auto;
   border: 1.5px dashed #ffffff;
 }
 
-.image-title-wrap {
+.remove-image-container{
   padding: 0 15px 15px 15px;
   color: #222;
 }
@@ -161,10 +157,10 @@ margin:0 auto;
 }
 
 .file-upload-image {
-  max-height: 200px;
-  max-width: 200px;
+  max-height: 70%;
+  max-width: 70%;
   margin: auto;
-  padding: 20px;
+  margin-bottom: 5%;
 }
 
 .remove-image {
@@ -194,15 +190,8 @@ margin:0 auto;
   transition: all 0.2s ease;
 }
 
-.nav-distance {
-  padding: 2.1% 7.7%
-
-}
 .navbar-light .navbar-brand{
-
   font-family: NanumSquareR;
-  line-height: 1.68;
-  text-align: left;
   color: #008000;
 }
 
@@ -241,8 +230,8 @@ margin:0 auto;
   margin-right: 10px;
 }
 /*바와 간격 설정*/
-.section {
-  margin-top:100px;
+.title-section {
+  margin-top:80px;
 }
 .title{
   font-family: NanumSquareR;
@@ -255,6 +244,9 @@ margin:0 auto;
   line-height: 1.53;
   text-align: center;
   color: #35465d;
+}
+.loading-image{
+  width: 20%;
 }
 #label-container {
   margin: 0 auto;

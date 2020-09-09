@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <script data-ad-client="ca-pub-6078835814584861" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script
+    data-ad-client="ca-pub-6078835814584861"
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+  ></script>
   <head>
-   
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177454767-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-177454767-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'UA-177454767-1');
-</script>
-    
+      gtag("config", "UA-177454767-1");
+    </script>
+
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -44,27 +52,27 @@
 
   <body>
     <!-- 네비게이션 바 부분 -->
-    <nav class="navbar navbar-expand-lg navbar-light nav-distance">
+    <nav
+      class="navbar navbar-expand-lg navbar-light nav-distance"
+      style="display: flex; justify-content: space-around;"
+    >
       <a class="navbar-brand" href="#">애완동물 품종 탐색 (강아지, 고양이)</a>
+      <a
+        href="https://github.com/TeamNoWon/Pet-Breed-Classification"
+        class="github-link"
+        target="_blank"
+      >
+        <img
+          src="img/깃허브 아이콘.png"
+          class="github-icon"
+          style="width: 10%"
+        />By TeamNoWon</a
+      >
     </nav>
-    <section class="section">
+
+    <section class="title-section">
       <h1 class="title">인공지능 애완동물 품종 분류기 (강아지,고양이)</h1>
       <h2 class="subtitle">What is the breed of that pet?</h2>
-    </section>
-    <section class="github">
-      <div class="container mt-5 github-cover d-flex flex-row-reverse">
-        <a
-          href="https://github.com/TeamNoWon/Pet-Breed-Classification"
-          class="github-link"
-          target="_blank"
-        >
-          <img
-            src="img/깃허브 아이콘.png"
-            class="github-icon"
-            style="width: 10%"
-          />By TeamNoWon</a
-        >
-      </div>
     </section>
 
     <div class="container file-upload">
@@ -93,40 +101,77 @@
           src="#"
           alt="your image"
         />
+
         <div id="label-container"></div>
-        <div class="image-title-wrap">
+        <div class="loading">
+          <img
+            src="img/loading.gif"
+            alt="loading-image"
+            class="loading-image"
+          />
+        </div>
+        <div class="remove-image-container">
           <button type="button" onclick="removeUpload()" class="remove-image">
             사진 제거
           </button>
         </div>
       </div>
     </div>
-    <div class="ad-banner">
-    <ins class="kakao_ad_area" style="display:none;" 
- data-ad-unit    = "DAN-1jeyvv7mz04zc" 
- data-ad-width   = "320" 
- data-ad-height  = "100"></ins></div>
-<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-  <!-- 쿠팡 광고 삽입부분 -->
-<div class="container d-flex coupang-banner">
-  <iframe src="https://coupa.ng/bJvJ8S" width="120" height="240" frameborder="0" scrolling="no"></iframe>
-  <iframe src="https://coupa.ng/bJvKqk" width="120" height="240" frameborder="0" scrolling="no"></iframe>
-  <iframe src="https://coupa.ng/bJvKNJ" width="120" height="240" frameborder="0" scrolling="no"></iframe>
 
-  </div>
-   <!-- 저작권 표시 -->
-    <footer class="footer pt-4 container d-flex just-content-center">
-      <div>
-        <p>&copy; TeamNoWon 2020. All Rights Reserved. </p>
-      </div>
-    </footer>
-    
+    <div class="ad-banner">
+      <ins
+        class="kakao_ad_area"
+        style="display: none"
+        data-ad-unit="DAN-1jeyvv7mz04zc"
+        data-ad-width="320"
+        data-ad-height="100"
+      ></ins>
+    </div>
+
+    <!-- 쿠팡 광고 삽입부분 -->
+    <div class="container d-flex coupang-banner">
+      <iframe
+        src="https://coupa.ng/bJvJ8S"
+        width="120"
+        height="240"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+      <iframe
+        src="https://coupa.ng/bJvKqk"
+        width="120"
+        height="240"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+      <iframe
+        src="https://coupa.ng/bJvKNJ"
+        width="120"
+        height="240"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+    </div>
+
     <div id="label-container"></div>
 
     <!-- 댓글창 -->
+    <div
+      id="disqus_thread"
+      style="margin: 10%; margin-top: 0px; margin-bottom: 10px"
+    ></div>
+    <!-- 저작권 표시 -->
+    <footer class="footer pt-4 container d-flex just-content-center">
+      <div>
+        <p>&copy; TeamNoWon 2020. All Rights Reserved.</p>
+      </div>
+    </footer>
 
-    <div id="disqus_thread" style="margin: 10%; margin-top: 0px;"></div>
-
+    <script
+      type="text/javascript"
+      src="//t1.daumcdn.net/kas/static/ba.min.js"
+      async
+    ></script>
     <script>
       /**
        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.

@@ -1,6 +1,8 @@
 var modelData; // json 파일 저장용
 
 function readURL(input) {
+  $(".remove-image-container").hide();
+
   if (input.files && input.files[0]) {
     var reader = new FileReader();
 
@@ -8,9 +10,8 @@ function readURL(input) {
       $(".image-upload-wrap").hide();
 
       $(".file-upload-image").attr("src", e.target.result);
-      $(".file-upload-content").show();
 
-      $(".image-title").html(input.files[0].name);
+      $(".file-upload-content").show();
     };
 
     reader.readAsDataURL(input.files[0]);
@@ -70,18 +71,12 @@ async function init() {
   labelContainer.appendChild(document.createElement("div"));
 }
 
-//웹캠 안쓸 거라서 주석처리함.
-//     async function loop() {
-//         webcam.update(); // update the webcam frame
-//         await predict();
-//         window.requestAnimationFrame(loop);
-//     }
-
 // run the webcam image through the image model
 async function predict() {
   // predict can take in an image, video or canvas html element
   var image = document.getElementById("pet-image");
   var prediction = await model.predict(image, false);
+  
   findTopPrediction(prediction);
 }
 
@@ -124,6 +119,10 @@ function findTopPrediction(predictionObj) {
 
   // 예측한 애완동물
   var predictPet = predictionObj[topPrectionIndex].className;
+  // 로딩창 숨기기
+  $(".loading").hide();
+  $(".remove-image-container").show();
+
 
   const classPrediction = `
     <p style="font-weight:bold; font-size: x-large">
