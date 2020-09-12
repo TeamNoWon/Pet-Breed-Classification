@@ -4,11 +4,16 @@ body {
   font-family: "Noto Sans KR", sans-serif !important;
   background-color: #ffffff;
 }
-.ad-banner {
-  width: 400px;
+.ad-banner1 {
+  width: 75%;
   margin:0 auto;
 }
-.coupang-banner {
+.ad-banner2 {
+  width: 75%;
+  margin:0 auto;
+}
+.ad-last {
+  text-align: center;
   justify-content: center;
   margin:0 auto;
 }
